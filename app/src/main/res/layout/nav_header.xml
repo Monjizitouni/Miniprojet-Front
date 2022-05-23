@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+
+    android:background="@color/white"
+
+    tools:context=".Profille">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_marginTop="16dp"
+        android:id="@+id/imguser"
+        android:layout_width="156dp"
+        android:layout_height="108dp"
+        android:layout_gravity="center"
+        android:src="@drawable/logo"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/profilname"
+        android:layout_width="226dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:paddingTop="8dp"
+        android:text="User"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="italic|bold"
+
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/profemail"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:text="monji.zitouni@esprit.tn"
+        android:textSize="16dp"
+        tools:ignore="MissingConstraints"
+        android:textColor="@color/black"
+        android:textStyle="italic|bold"/>
+
+
+</LinearLayout>

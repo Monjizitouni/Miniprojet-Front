@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserActivity"
+    android:background="@drawable/back8"
+ >
+
+
+    <ImageView
+        android:id="@+id/drugCoverImageView"
+        android:layout_width="198dp"
+        android:layout_height="134dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/med2" />
+
+    <Button
+        android:id="@+id/addtopanier"
+        android:layout_width="212dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="4dp"
+        android:backgroundTint="@color/white"
+        android:text="Add to Cart"
+        android:textColor="@color/colorprimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cartbutton"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/cartbutton"
+        android:layout_width="195dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="4dp"
+        android:backgroundTint="@color/colorprimary"
+        android:text="@string/view_cart"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/addtopanier"
+        app:layout_constraintTop_toBottomOf="@+id/pharmdetails"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="363dp"
+        android:layout_height="244dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="30dp"
+
+
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/bordershape"
+        android:backgroundTint="#41000000"
+        android:paddingTop="-200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/drugCoverImageView">
+
+        <TextView
+            android:id="@+id/drugNameTextView"
+            android:layout_width="123dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="224dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@{item.drugName}"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/categoryTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Item name" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:numStars="5"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/drugNameTextView" />
+
+
+        <TextView
+            android:id="@+id/categoryTextView"
+            android:layout_width="195dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="53dp"
+            android:layout_marginBottom="26dp"
+            android:gravity="center"
+            android:text="@{item.caTname}"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/drugDescriptionTextView"
+            app:layout_constraintEnd_toStartOf="@+id/drugUnitPriceTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/drugNameTextView"
+            tools:text="Category" />
+
+        <TextView
+            android:id="@+id/drugDescriptionTextView"
+            android:layout_width="322dp"
+            android:layout_height="87dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="14dp"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:lineSpacingExtra="8sp"
+            android:text="@{item.description}"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_title_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/categoryTextView"
+            tools:text="Singapore,an island city state.Singapore,an island city state.Singapore,an island city state.Singapore,an island city state.Singapore,an island city state.Singapore,an island city state.Singapore,an island city state.Singapore,an island city state.Singapore,an island city state." />
+
+        <TextView
+            android:id="@+id/featureIconImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="61dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginBottom="52dp"
+            android:text="DT"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/drugDescriptionTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/drugUnitPriceTextView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/drugUnitPriceTextView"
+            android:layout_width="50dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="68dp"
+            android:layout_marginBottom="39dp"
+            android:text="@{item.unitPrice}"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/drugDescriptionTextView"
+            app:layout_constraintEnd_toStartOf="@+id/featureIconImageView"
+            app:layout_constraintStart_toEndOf="@+id/categoryTextView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.333"
+            tools:ignore="MissingConstraints"
+            tools:text="11000" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pharmdetails"
+        android:layout_width="356dp"
+        android:layout_height="182dp"
+        android:layout_marginStart="30dp"
+
+        android:layout_marginEnd="30dp"
+        android:orientation="vertical"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/addtopanier"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+        app:layout_constraintVertical_bias="0.395" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
